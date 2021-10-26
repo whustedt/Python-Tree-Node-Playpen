@@ -37,9 +37,9 @@ def debugDump(name, tree, detailed=True):
     tree.display()
     if (detailed):
         print('***** DEPTH-FIRST ITERATION *****')
-        [print(identifier) for identifier in tree.traverse()]
+        [print('-', identifier) for identifier in tree.traverse()]
         print('***** BREADTH-FIRST ITERATION *****')
-        [print(identifier) for identifier in tree.traverse(mode='breadth')]
+        [print('-', identifier) for identifier in tree.traverse(mode='breadth')]
         
 def compare(tree1_name, tree1, tree2_name, tree2):
     print(f'{tree1_name} is {tree2_name}: {tree1 is tree2}')
